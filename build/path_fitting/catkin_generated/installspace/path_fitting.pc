@@ -1,0 +1,8 @@
+prefix=/home/jetson/my_ws/install
+
+Name: path_fitting
+Description: Description of path_fitting
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,12 @@
+string frame_id
+time stamp
+float32 scores
+float32 ptx
+float32 pty
+float32 distw
+float32 disth
+float32 centerx
+float32 centery
+float32 distance_x
+float32 distance_y
+float32 distance

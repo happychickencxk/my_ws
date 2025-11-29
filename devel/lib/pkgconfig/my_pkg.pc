@@ -1,0 +1,8 @@
+prefix=/home/jetson/my_ws/devel
+
+Name: my_pkg
+Description: Description of my_pkg
+Version: 0.0.0
+Cflags: -I/home/jetson/my_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

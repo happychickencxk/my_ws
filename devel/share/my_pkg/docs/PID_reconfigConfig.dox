@@ -1,0 +1,12 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Kp" : \b [double] Kp in PID min: 0.0, default: 0.017, max: 10.0
+- \b "~Ki" : \b [double] Ki in PID min: 0.0, default: 0.0, max: 10.0
+- \b "~Kd" : \b [double] Kd in PID min: 0.0, default: 0.35, max: 10.0
+- \b "~ServoBias" : \b [int] Servo Bias min: -600, default: 0, max: 600
+- \b "~p_vel" : \b [double] Purpose velocity(m/s) min: 0.0, default: -10.0, max: 10.0
+- \b "~p_ang" : \b [double] Purpose angular velocity('/s) min: 0.0, default: -10.0, max: 10.0
+- \b "~servo_angle" : \b [double] Purpose Servo agnle(') min: -75.0, default: 0.0, max: 75.0
+

@@ -1,0 +1,13 @@
+\subsubsection usage Usage
+\verbatim
+<node name="my_pkg" pkg="my_pkg" type="my_pkg">
+  <param name="Kp" type="double" value="0.017" />
+  <param name="Ki" type="double" value="0.0" />
+  <param name="Kd" type="double" value="0.35" />
+  <param name="ServoBias" type="int" value="0" />
+  <param name="p_vel" type="double" value="-10.0" />
+  <param name="p_ang" type="double" value="-10.0" />
+  <param name="servo_angle" type="double" value="0.0" />
+</node>
+\endverbatim
+

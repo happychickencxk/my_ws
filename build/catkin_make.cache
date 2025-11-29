@@ -1,0 +1,2 @@
+astra_launch:lsx10/lslidar:lsx10/lslidar_driver:lsx10/lslidar_msgs:my_pkg:my_urdf:openslam_gmapping:path_fitting:robot_localization-melodic-devel:ros_astra_camera:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:urdf_tutorial:xtark_urdf-master:yahboomcar_msgs:yolo_pkg
+-DCATKIN_DEVEL_PREFIX=/home/jetson/my_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetson/my_ws/install -G Unix Makefiles

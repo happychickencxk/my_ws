@@ -1,0 +1,58 @@
+# 基础设置
+frequency: 50
+sensor_timeout: 0.1
+two_d_mode: true
+print_diagnostics: true
+debug: false  # 暂时开启debug查看详细输出
+publish_tf: true
+
+# 坐标系
+map_frame: map
+odom_frame: odom
+base_link_frame: base_link
+world_frame: odom
+
+# 里程计配置 - 简化配置
+odom0: odom
+odom0_config: [true,  true,  false,   # x,y位置
+               false, false, true,    # 使用yaw角度
+               true,  false, false,   # 使用vx线速度
+               false, false, false,   # 不使用角速度
+               false, false, false]   # 不使用加速度
+odom0_differential: false
+odom0_queue_size: 2
+odom0_nodelay: false
+odom0_relative: true
+
+# IMU配置 - 简化配置
+imu0: Imu
+imu0_config: [false, false, false,   # 不使用位置
+              false, false, true,    # 只使用yaw姿态
+              false, false, false,   # 不使用线速度
+              false, false, true,    # 只使用yaw角速度
+              false, false, false]   # 暂时禁用所有加速度
+imu0_remove_gravitational_acceleration: true
+imu0_differential: false
+
+odom1: ""
+odom1_config: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+# 暂时禁用控制输入
+use_control: false
+
+# 保守的过程噪声
+process_noise_covariance: [0.05, 0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,    0,    0,    0,    0,
+                           0,    0.05, 0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0.06, 0,    0,    0,    0,    0,    0.03, 0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0.03, 0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0.03, 0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0.05, 0,    0,    0,    0,    0,    0.02, 0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0.02, 0,    0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0.02, 0,    0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0.03, 0,    0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0.01, 0,    0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0.01, 0,    0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0.1,  0,    0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0.1,  0,
+                           0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0.1]

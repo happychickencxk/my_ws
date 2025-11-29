@@ -1,0 +1,5 @@
+PLUGIN_LIBRARY: libmyplugins.so
+engine_file_path: 640X480.engine
+CONF_THRESH: 0.8
+IOU_THRESHOLD: 0.5
+categories: ['blue', 'red', 'yellow']

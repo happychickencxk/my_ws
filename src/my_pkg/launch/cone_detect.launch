@@ -1,0 +1,5 @@
+<launch>
+<rosparam file="$(find my_pkg)/config/robot_param.yaml" command="load"/>
+    <include file="$(find my_pkg)/launch/car_driver.launch"/>
+    <include file="$(find yolo_pkg)/launch/yolotrt_node.launch"/>
+</launch>

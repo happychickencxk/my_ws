@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find astra_camera)/launch/gemini.launch"/>
+    <node pkg="yolo_pkg" name ="yolotrt_node" type="yolotrt_node.py" output="screen" respawn="true"/> 
+</launch>

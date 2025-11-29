@@ -1,0 +1,8 @@
+prefix=/home/jetson/my_ws/devel
+
+Name: xtark_urdf
+Description: Description of xtark_urdf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
