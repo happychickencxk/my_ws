@@ -766,6 +766,10 @@ void car_driver::pub_imu_adc(){
 void car_driver::cmd_vel_cb(const geometry_msgs::Twist::ConstPtr& msg) {
     vel_data vdata{msg->linear.x, msg->angular.z};
     set_vel(&vdata);
+    //弧度制转角度,以及路径拟合算法左为正,car_driver中左为负
+    float tmp=-(msg->angular.z)*M_PI/180.0;
+    servo_data a{tmp};
+    set_servo_angle(a);
 }
 
 void car_driver::check_connent(){
@@ -794,7 +798,10 @@ void car_driver::set_vel(vel_data* data) {
 
 void car_driver::set_servo_angle(servo_data* data) {
     uint8_t buffer[5] = {0}; // ID_SERVO + 1 flaot
-    data->servo_angle+=135; //偏置到单片机对应角度,jetson上中间为0度,单片机上50ms对应0度
+    float servo_angle_tmp=data->servo_angle;
+    if(servo_angle_tmp<-75){servo_angle_tmp=-75;}
+    else if(servo_angle_tmp>75){servo_angle_tmp=75;}
+    servo_angle_tmp+=135; //偏置到单片机对应角度,jetson上中间为0度,单片机上50ms对应0度
     buffer[0] = ID_SERVO;
     static_assert(sizeof(servo_data) == 4, "vel_data size mismatch");
     memcpy(buffer+1, data, sizeof(servo_data));

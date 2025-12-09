@@ -1,26 +1,19 @@
 {
-    "configurations": [
-        {
-            "browse": {
-                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
-                "limitSymbolsToIncludedHeaders": false
-            },
-            "includePath": [
-                "/opt/ros/melodic/include/**",
-                "/home/jetson/yahboomcar_ws/devel/include/**",
-                "/home/jetson/yahboomcar_ws/src/gscam/include/**",
-                "/home/jetson/my_ws/src/my_pkg/include/**",
-                "/home/jetson/yahboomcar_ws/src/opencv_apps/include/**",
-                "/home/jetson/yahboomcar_ws/src/yahboomcar_bringup/include/**",
-                "/usr/include/**",
-                "/opt/ros/melodic/include"
-            ],
-            "name": "ROS",
-            "intelliSenseMode": "gcc-arm64",
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "gnu11",
-            "cppStandard": "c++14"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "name": "windows-gcc-x86",
+      "intelliSenseMode": "windows-gcc-x86",
+      "compilerPath": "C:/MinGW/bin/gcc.exe",
+      "cStandard": "${default}",
+      "cppStandard": "${default}"
+    }
+  ],
+  "version": 4
 }
