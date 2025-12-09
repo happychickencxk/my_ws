@@ -33,7 +33,7 @@
 
 ### TF树
 ![TF_tree](pic/tf_tree.png)
-*ros_graph下的总结点图*
+*ros_tf_tree下的tf结构图*
 
 ## 通信协议
 
